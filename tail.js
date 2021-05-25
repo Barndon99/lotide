@@ -16,3 +16,6 @@ const tail = function (array) {
     }
   } return result;
 };
+
+let array = [1, 4, 8, 9, 2, 34];
+assertEqual(tail(array).length, (array.length - 1));
