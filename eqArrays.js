@@ -6,15 +6,16 @@ const assertEqual = function(actual, expected) {
   }
 };
 
-const eqArrays = function(array, array1) {
-  let isTrue = 0;
+const eqArrays = function(array, comparedArray) {
+  if (array.length !== comparedArray.length) {
+    return false;
+  }
   for (let i = 0; i < array.length; i++) {
-    if (array[i] === array1[i]) {
-      isTrue = true;
-    } else if (array[i] !== array1[i]) {
-      isTrue = false;
+    if (array[i] !== comparedArray[i]) {
+      return false;
     }
-  } return isTrue;
+  } 
+  return true;
 };
 
 assertEqual(eqArrays([false, 2, "far"], [false, 2, "far"]), true);
