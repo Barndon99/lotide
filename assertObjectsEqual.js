@@ -18,19 +18,19 @@ const eqObjects = function (object1, object2) {
     return false;
   }
   
-  for(let key of keys1) {
+  for (let key of keys1) {
     if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
       return eqArrays(object1[key], object2[key]);
-    }
+    } //recursively move down through keys which are objects
     if (object1[key] !== object2[key]) {
       return false;
     }
   }
   return true;
-}
+};
 
 const assertObjectsEqual = function(object1, object2, expected) {
-  const inspect = require('util').inspect; 
+  const inspect = require('util').inspect;
   console.log("o1:", object1, "o2:", object2);
 
   if (eqObjects(object1, object2) === expected) {
