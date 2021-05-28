@@ -9,7 +9,6 @@ const eqArrays = function(array, comparedArray) {
   } 
   return true;
 };
-console.log(eqArrays([1, 2, 3, 4], [1, "2", 3, 4]));
 
 const assertArraysEqual = function(array, comparedArray, expected) {
   if (eqArrays(array, comparedArray) === expected) {
