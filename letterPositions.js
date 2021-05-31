@@ -1,22 +1,6 @@
-const eqArrays = function(array, comparedArray) {
-  if (array.length !== comparedArray.length) {
-    return false;
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] !== comparedArray[i]) {
-      return false;
-    }
-  } 
-  return true;
-};
+const eqArrays = require('./eqArrays');
 
-const assertArraysEqual = function(array, comparedArray, expected) {
-  if (eqArrays(array, comparedArray) === expected) {
-    console.log(`😤😤😤 Assertion Passed ${array} === ${comparedArray}`);
-  } else {
-    console.log(`💀💀💀 Assertion Failed ${array} !== ${comparedArray}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual');
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -34,6 +18,8 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions("hello").l, [2, 3], true);
-assertArraysEqual(letterPositions("hello").e, [1], true);
-assertArraysEqual(letterPositions("hello").h, [0], true);
+// assertArraysEqual(letterPositions("hello").l, [2, 3], true);
+// assertArraysEqual(letterPositions("hello").e, [1], true);
+// assertArraysEqual(letterPositions("hello").h, [0], true);
+
+module.exports = letterPositions;

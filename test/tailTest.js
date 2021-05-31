@@ -1,6 +1,7 @@
 const assertEqual = require('../assertEqual.js');
 const tail = require('../tail.js');
 const assert = require('chai').assert;
+
 //Test code
 // let array = [1, 4, 8, 9, 2, 34];
 // assertEqual(tail(array).length, (array.length - 1));

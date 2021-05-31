@@ -18,4 +18,6 @@ const without = function(array, elementsToRemove) {
   return newArray;
 };
 
-console.log(without([1, "hello", 3], ["hello", 2]));
+// console.log(without([1, "hello", 3, 2], ["hello", 2]));
+
+module.exports = without;
