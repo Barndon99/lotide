@@ -1,22 +1,6 @@
-const eqArrays = function(array, comparedArray) {
-  if (array.length !== comparedArray.length) {
-    return false;
-  }
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] !== comparedArray[i]) {
-      return false;
-    }
-  } 
-  return true;
-};
+const eqArrays = require('./eqArrays.js');
 
-const assertArraysEqual = function(array, comparedArray, expected) {
-  if (eqArrays(array, comparedArray) === expected) {
-    console.log(`😤😤😤 Assertion Passed ${array} === ${comparedArray}`);
-  } else {
-    console.log(`💀💀💀 Assertion Failed ${array} !== ${comparedArray}`);
-  }
-};
+const assertArraysEqual = require('./assertArraysEqual.js');
 
 const middle = function(array) {
   let middleOfArray = "";
@@ -29,7 +13,6 @@ const middle = function(array) {
   if (array.length % 2 !== 0) {
     middleOfArray = Math.ceil(array.length / 2) - 1;
     numToReturn.push(array[middleOfArray]);
-    console.log("middleOfArray", middleOfArray, "numToReturn", numToReturn);
   } else {
     middleOfArray = Math.ceil(array.length / 2) - 1;
     numToReturn.push(array[middleOfArray], array[middleOfArray + 1]);
@@ -38,7 +21,5 @@ const middle = function(array) {
   return numToReturn;
 };
 
-console.log(middle([]));
-console.log(middle(["hello", "hi", "hi", "what", "are"]));
-console.log(middle([1, 3]));
-console.log(middle([1, 3, 6, 8, 7, 8]));
+module.exports = middle;
+
