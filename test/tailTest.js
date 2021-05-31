@@ -1,5 +1,5 @@
-const assertEqual = require('../assertEqual.js');
-const tail = require('../tail.js');
+
+const index = require('../index');
 const assert = require('chai').assert;
 
 //Test code
@@ -10,9 +10,9 @@ const assert = require('chai').assert;
 
 describe("#tail", () => {
   it("Should return everything but the first index of an array", () => {
-    assert.deepEqual(tail([1, 4, 5, 6, 7]), [4, 5, 6, 7]);
+    assert.deepEqual(index.tail([1, 4, 5, 6, 7]), [4, 5, 6, 7]);
   });
   it("Should return an empty array if the input is an empty array", () => {
-    assert.deepEqual(tail([]), []);
+    assert.deepEqual(index.tail([]), []);
   });
 });

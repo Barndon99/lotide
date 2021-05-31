@@ -1,7 +1,6 @@
-const eqArrays = require('../eqArrays.js');
-const assertEqual = require('../assertEqual.js');
+const index = require('../index');
 
 //Test code
-assertEqual(eqArrays([false, 2, "far"], [false, 2, "far"]), true);
-assertEqual(eqArrays([false, 3, "far"], [false, 2, "far"]), false);
-assertEqual(eqArrays([1, 2, 3, 4, 5], [1, 2, 3, 4]), false);
+index.assertEqual(index.eqArrays([false, 2, "far"], [false, 2, "far"]), true);
+index.assertEqual(index.eqArrays([false, 3, "far"], [false, 2, "far"]), false);
+index.assertEqual(index.eqArrays([1, 2, 3, 4, 5], [1, 2, 3, 4]), false);
